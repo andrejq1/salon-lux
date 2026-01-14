@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <title>Potvrda termina</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+    h2 { font-size: 1.5rem; }
+    .success { color: green; }
+    .error { color: red; }
+    .warning { color: orange; }
+  </style>
+</head>
+<body>
+  <h2 id="msg" class="warning">Proveravam termin...</h2>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
+<script>
+  // INIT EmailJS
+  emailjs.init("AkGY6B7cDurTsZ36B");
+
+  // INIT Firebase
+  firebase.initializeApp({
+    apiKey: "AIzaSyCcTNK91PjYMaFleYY1uEFcQryczq_R04c",
+    authDomain: "salonlux-c34fd.firebaseapp.com",
+    projectId: "salonlux-c34fd"
+  });
+  const db = firebase.firestore();
+
+  const msg = document.getElementById("msg");
+  const token = new URLSearchParams(window.location.search).get("token");
+
+  (async () => {
+    if (!token) {
+      msg.textContent = "❌ Nevažeći link.";
+      msg.className = "error";
+      return;
+    }
+
+    const snap = await db.collection("termini")
+      .where("confirmToken", "==", token)
+      .get();
+
+    if (snap.empty) {
+      msg.textContent = "❌ Termin ne postoji ili je već potvrđen.";
+      msg.className = "error";
+      return;
+    }
+
+    const doc = snap.docs[0];
+    const data = doc.data();
+
+    if (data.status === "confirmed") {
+      msg.textContent = "✅ Termin je već potvrđen!";
+      msg.className = "success";
+      setTimeout(() => window.location.href = "index.html", 10000);
+      return;
+    }
+
+    if (Date.now() > data.confirmExpiresAt) {
+      msg.textContent = "⏰ Link je istekao.";
+      msg.className = "warning";
+      return;
+    }
+
+    // Provera da li je termin već zauzet (neko drugi ga je potvrdio)
+const clashSnap = await db.collection("termini")
+  .where("frizerka", "==", data.frizerka)
+  .where("dan", "==", data.dan)
+  .where("termin", "==", data.termin)
+  .where("status", "==", "confirmed")
+  .get();
+
+if (!clashSnap.empty) {
+  msg.textContent = "❌ Nažalost, ovaj termin je već zauzet.";
+  msg.className = "error";
+  return;
+}
+
+    // Update status na confirmed
+    await doc.ref.update({ status: "confirmed" });
+    msg.textContent = "✅ Termin je uspešno potvrđen!";
+    msg.className = "success";
+
+    // Salonu se šalje email tek nakon potvrde
+    await emailjs.send("service_jvg68bf", "template_o4trruo", {
+      ime: data.ime,
+      prezime: data.prezime,
+      telefon: data.telefon,
+      frizerka: data.frizerka,
+      dan: data.dan,
+      termin: data.termin,
+      usluga: data.usluga,
+      email: data.email 
+    });
+
+    // Redirect na pocetnu posle 10 sekundi
+    setTimeout(() => window.location.href = "index.html", 10000);
+
+  })();
+</script>
+</body>
+</html>

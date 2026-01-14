@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salon LUX</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">LUX</div>
+  <div class="menu" id="menu">
+    <a href="index.html">Početna</a>
+    <a href="#zakazi">Zakaži</a>
+    <a href="about.html">O nama</a>
+    <a href="musterije.html">Zadovoljne mušterije</a>
+    <a href="cenovnik.html" class="active">Cenovnik</a>
+  </div>
+
+  <div class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Dobrodošli u Salon LUX</h1>
+    <p>Vrhunske frizerske usluge u luksuznom ambijentu</p>
+  </div>
+</section>
+
+<!-- SEO INTRO -->
+<section class="seo-intro fade-in">
+  <h2>Vrhunski frizerski salon u Beogradu</h2>
+  <div class="gold-line"></div>
+  <p>
+    Salon LUX je luksuzni frizerski salon u Beogradu koji nudi
+    profesionalne frizerske usluge za žene i muškarce.
+    Specijalizovani smo za šišanje, farbanje, stilizovanje i negu kose,
+    uz pažljivo odabran ambijent i vrhunski kvalitet usluge.
+  </p>
+</section>
+
+<!-- ZAŠTO SALON LUX -->
+<section class="why-lux fade-in">
+  <h2>Zašto baš Salon LUX?</h2>
+  <p>
+    Salon LUX kombinuje vrhunsku stručnost, luksuz u svakom detalju i neuporedivu pažnju prema klijentima. 
+    Naš tim koristi samo najbolje proizvode i tehnike kako bi vaš izgled bio savršen. 
+    Kod nas iskustvo friziranja postaje umetnost.
+  </p>
+</section>
+
+<!-- RADNO VREME -->
+<section class="work-hours fade-in">
+  <h2>Radno vreme</h2>
+  <p>Ponedeljak – Petak: 08:00 – 20:00</p>
+  <p>Subota – Nedelja: Zatvoreno</p>
+</section>
+
+<!-- KONTAKT -->
+<section class="contact fade-in">
+  <h2>Kontakt</h2>
+  <p>Adresa: Bulevar Kralja Aleksandra 123, 11000 Beograd</p>
+  <p>Telefon: +381 63 456 789</p>
+  <p>Email: salonlux@gmail.com</p>
+</section>
+
+<!--LOKACIJA-->
+<section class="location fade-in">
+  <h2>Gde se nalazimo</h2>
+   <div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.9796787740056!2d20.48405617667604!3d44.80160277740306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7a9d2e209169%3A0x2045d35e988a015c!2sBulevar%20kralja%20Aleksandra%20123%2C%20Beograd%2011000!5e0!3m2!1sen!2srs!4v1767710360271!5m2!1sen!2srs" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<!-- USLUGE -->
+<section class="services fade-in">
+  <h2>Naše usluge</h2>
+  <div class="cards">
+    <div class="card">Ženske frizure</div>
+    <div class="card">Muška frizure</div>
+    <div class="card">Farbane & tretmani</div>
+    <div class="card">Feniranje & stil</div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="booking fade-in" id="zakazi">
+  <h2>Zakaži termin</h2>
+  <form id="bookingForm">
+    <div class="field">
+    <input type="text" id="ime" placeholder=" " required minlength="3">
+    <label for="ime">Ime</label>
+    </div>
+    <div class="field">
+    <input type="text" id="prezime" placeholder=" " required minlength="3">
+    <label for="prezime">Prezime</label>
+    </div>
+    <div class="field">
+    <input type="tel" id="telefon" placeholder=" " required pattern="[0-9]{6,}">
+    <label for="telefon">Telefon</label>
+    </div>
+    <div class="field">
+    <input type="email" id="email" placeholder=" " required>
+    <label for="email">Email</label>
+    </div>
+
+    <select id="frizerka" required>
+      <option value="">Izaberite frizerku</option>
+      <option value="Jelena">Jelena (8–16h)</option>
+      <option value="Ana">Ana (12–20h)</option>
+    </select>
+
+    <select id="dan" required>
+      <option value="">Izaberite dan</option>
+    </select>
+
+    <select id="termin" required>
+      <option value="">Izaberite termin</option>
+    </select>
+
+    <select id="usluga" required>
+      <option value="">Izaberite uslugu</option>
+      <option value="Žensko šišanje">Žensko šišanje</option>
+      <option value="Muško šišanje">Muško šišanje</option>
+      <option value="Šišanje i feniranje">Šišanje + feniranje</option>
+      <option value="Farbanje kose">Farbanje kose</option>
+      <option value="Pramenovi / Balayage">Pramenovi / Balayage</option>
+      <option value="Keratinski tretman">Keratinski tretman</option>
+      <option value="Nega kose">Nega kose</option>
+    </select>
+
+    <div class="consent-field">
+      <input type="checkbox" id="consent" name="consent" required>
+      <label for="consent">
+        Saglasan/na sam sa <a href="privacy.html" target="_blank"> obradom ličnih podataka </a>
+      </label>
+    </div>
+
+    <button type="submit">Zakaži termin</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+
+    <!-- LEVO: LOGO + INSTAGRAM -->
+    <div class="footer-left">
+      <div class="footer-logo">LUX</div>
+
+      <div class="footer-instagram">
+        <a href="https://www.instagram.com/ronaldo/" target="_blank">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 2H17C20.3137 2 23 4.68629 23 8V18C23 21.3137 20.3137 24 17 24H7C3.68629 24 1 21.3137 1 18V8C1 4.68629 3.68629 2 7 2Z"
+              stroke="currentColor" stroke-width="2"/>
+            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
+            <circle cx="18" cy="6" r="1" fill="currentColor"/>
+          </svg>
+          <span>Pratite nas</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- SREDINA: KONTAKT -->
+    <div class="footer-contact">
+      <h4>Kontakt</h4>
+
+      <p>📍 Bulevar kralja Aleksandra 123, Beograd, Srbija</p>
+
+      <a href="tel:+38163456789">📞 +381 63 456 789</a>
+
+      <p>⏰ Pon – Pet: 08:00 – 20:00</p>
+      <p>⏰ Sub – Ned: Zatvoreno</p>
+    </div>
+
+    <!-- DESNO: BRZI LINKOVI -->
+    <div class="footer-links">
+      <h4>Brzi linkovi</h4>
+      <ul>
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="about.html">O nama</a></li>
+        <li><a href="musterije.html">Zadovoljne mušterije</a></li>
+        <li><a href="#zakazi">Zakaži termin</a></li>
+        <li><a href="cenovnik.html">Cenovnik</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Salon LUX. Sva prava zadržana.
+  </div>
+</footer>
+
+<!-- EMAILJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  emailjs.init("AkGY6B7cDurTsZ36B");
+</script>
+
+<!-- 🔥 FIREBASE -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyCcTNK91PjYMaFleYY1uEFcQryczq_R04c",
+    authDomain: "salonlux-c34fd.firebaseapp.com",
+    projectId: "salonlux-c34fd"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
+
+<!-- DATUMI -->
+<script>
+const dan = document.getElementById("dan");
+const nazivi = ["Nedelja","Ponedeljak","Utorak","Sreda","Četvrtak","Petak","Subota"];
+
+function generisiRadneDane() {
+  dan.innerHTML = '<option value="">Izaberite dan</option>';
+  let d = new Date(), count = 0, i = 0;
+
+  while (count < 6) {
+    let x = new Date();
+    x.setDate(d.getDate() + i);
+    if (x.getDay() >= 1 && x.getDay() <= 5) {
+      let value = x.toISOString().split("T")[0];
+      dan.innerHTML += `<option value="${value}">${nazivi[x.getDay()]} – ${x.getDate()}.${x.getMonth()+1}.${x.getFullYear()}</option>`;
+      count++;
+    }
+    i++;
+  }
+}
+generisiRadneDane();
+</script>
+
+<!-- TERMINI + FIREBASE -->
+<script>
+const frizerka = document.getElementById("frizerka");
+const termin = document.getElementById("termin");
+
+const termini = {
+  Ana: ["12:00","12:45","13:30","14:15","15:00","15:45","16:30","17:15","18:00","18:45","19:30"],
+  Jelena: ["08:00","08:45","09:30","10:15","11:00","11:45","12:30","13:15","14:00","14:45","15:30"]
+};
+
+function ucitajTermineRealtime() {
+  termin.innerHTML = '<option value="">Izaberite termin</option>';
+  if (!frizerka.value || !dan.value) return;
+
+  // ako je ranije bilo listenera, ugasi ga
+  if (window.unsubscribe) window.unsubscribe();
+
+  window.unsubscribe = db.collection("termini")
+    .where("frizerka", "==", frizerka.value)
+    .where("dan", "==", dan.value)
+    .onSnapshot(snapshot => {
+
+      termin.innerHTML = '<option value="">Izaberite termin</option>';
+
+      const zauzeti = snapshot.docs
+        .filter(d => d.data().status === "confirmed")
+        .map(d => d.data().termin);
+
+      termini[frizerka.value].forEach(t => {
+        if (!zauzeti.includes(t)) {
+          termin.innerHTML += `<option value="${t}">${t}</option>`;
+        }
+      });
+    });
+}
+
+// Event listeneri ostaju isti
+frizerka.addEventListener("change", ucitajTermineRealtime);
+dan.addEventListener("change", ucitajTermineRealtime);
+</script>
+
+<!-- SUBMIT + EMAIL + FIREBASE -->
+<script>
+document.getElementById("bookingForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const confirmToken = crypto.randomUUID();
+  const confirmLink = `https://andrejq1.github.io/salon-lux/potvrda.html?token=${confirmToken}`;
+
+  const data = {
+    ime: ime.value,
+    prezime: prezime.value,
+    telefon: telefon.value,
+    email: email.value,
+    frizerka: frizerka.value,
+    dan: dan.value,
+    termin: termin.value,
+    usluga: usluga.value,
+    createdAt: new Date(),
+    gdprAccepted: consent.checked,
+    gdprAcceptedAt: new Date(),
+
+    status: "pending",
+    confirmToken: confirmToken,
+    confirmExpiresAt: Date.now() + 30 * 60 * 1000,
+    confirmLink: confirmLink
+  };
+
+  await db.collection("termini").add(data);
+
+  await emailjs.send("service_jvg68bf", "template_lgfvvl4", {
+    ime: data.ime,
+    prezime: data.prezime,
+    email: data.email,
+    frizerka: data.frizerka,
+    dan: data.dan,
+    termin: data.termin,
+    usluga: data.usluga,
+    confirmLink: confirmLink
+  });
+
+  alert("✅ Termin je zakazan. Proverite svoj email da biste ga potvrdili.");
+
+  this.reset();
+  generisiRadneDane();
+  termin.innerHTML = '<option value="">Izaberite termin</option>';
+});
+</script>
+<script>
+  const faders = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  faders.forEach(el => observer.observe(el));
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const menu = document.getElementById("menu");
+
+  if (!hamburger || !menu) return;
+
+  hamburger.addEventListener("click", () => {
+    menu.classList.toggle("active");
+    hamburger.classList.toggle("open");
+  });
+
+  // zatvori meni kad se klikne na link
+  document.querySelectorAll(".menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("active");
+      hamburger.classList.remove("open");
+    });
+  });
+});
+</script>
+</body>
+</html>

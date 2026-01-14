@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O nama - Salon LUX</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">LUX</div>
+  
+   <!-- Desktop meni -->
+  <div class="menu" id="menu">
+    <a href="index.html">Početna</a>
+    <a href="#zakazi">Zakaži</a>
+    <a href="about.html">O nama</a>
+    <a href="musterije.html">Zadovoljne mušterije</a>
+    <a href="cenovnik.html" class="active">Cenovnik</a>
+  </div>
+
+    <div class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero small-hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>O Salonu LUX</h1>
+    <p>Vrhunska frizerska usluga u luksuznom ambijentu</p>
+  </div>
+</section>
+
+<!-- O NAMA -->
+<section class="about">
+  <h2>Naša priča</h2>
+  <p>Salon LUX je osnovan sa ciljem da pruži vrhunsko frizersko iskustvo, luksuz u detaljima i profesionalnu uslugu. Naš tim čine stručnjaci sa dugogodišnjim iskustvom, posvećeni stvaranju savršenog izgleda za svakog klijenta.</p>
+  <img src="1000007314.png" alt="Salon LUX interijer" class="full-img">
+  
+  <h2>Naš tim</h2>
+  <div class="team-cards">
+    <div class="team-card">
+      <img src="Jelena.png" alt="Jelena">
+      <h3>Jelena</h3>
+      <p>Stručnjak za ženske frizure i farbanje. Radi od 8h do 16h.</p>
+    </div>
+    <div class="team-card">
+      <img src="Ana.png" alt="Ana">
+      <h3>Ana</h3>
+      <p>Specijalista za muške frizure i feniranje. Radi od 12h do 20h.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+
+    <!-- LEVO: LOGO + INSTAGRAM -->
+    <div class="footer-left">
+      <div class="footer-logo">LUX</div>
+
+      <div class="footer-instagram">
+        <a href="https://www.instagram.com/ronaldo/" target="_blank">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 2H17C20.3137 2 23 4.68629 23 8V18C23 21.3137 20.3137 24 17 24H7C3.68629 24 1 21.3137 1 18V8C1 4.68629 3.68629 2 7 2Z"
+              stroke="currentColor" stroke-width="2"/>
+            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
+            <circle cx="18" cy="6" r="1" fill="currentColor"/>
+          </svg>
+          <span>Pratite nas</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- SREDINA: KONTAKT -->
+    <div class="footer-contact">
+      <h4>Kontakt</h4>
+
+      <p>📍 Bulevar kralja Aleksandra 123, Beograd, Srbija</p>
+
+      <a href="tel:+38163456789">📞 +381 63 456 789</a>
+
+      <p>⏰ Pon – Pet: 08:00 – 20:00</p>
+      <p>⏰ Sub – Ned: Zatvoreno</p>
+    </div>
+
+    <!-- DESNO: BRZI LINKOVI -->
+    <div class="footer-links">
+      <h4>Brzi linkovi</h4>
+      <ul>
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="about.html">O nama</a></li>
+        <li><a href="musterije.html">Zadovoljne mušterije</a></li>
+        <li><a href="#zakazi">Zakaži termin</a></li>
+        <li><a href="cenovnik.html">Cenovnik</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Salon LUX. Sva prava zadržana.
+  </div>
+</footer>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const menu = document.getElementById("menu");
+
+  if (!hamburger || !menu) return;
+
+  hamburger.addEventListener("click", () => {
+    menu.classList.toggle("active");
+    hamburger.classList.toggle("open");
+  });
+
+  // zatvori meni kad se klikne na link
+  document.querySelectorAll(".menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("active");
+      hamburger.classList.remove("open");
+    });
+  });
+});
+</script>
+</body>
+</html>

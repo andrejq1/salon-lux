@@ -1,0 +1,1179 @@
+/* GOOGLE FONTOVI */
+html {
+  scroll-behavior: smooth;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap');
+
+/* --- OSNOVNI RESET --- */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  background-color: #fff8f0; /* svetla bež/zlatna pozadina */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* --- NAVBAR --- */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding: 15px 30px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top:0;
+  z-index:1000;
+}
+
+.navbar .logo{
+  font-family: 'Playfair Display', serif;
+  font-size: 2em;
+  color: #b38f00; /* zlatna */
+  font-weight:700;
+}
+
+.navbar .menu a{
+  margin-left: 25px;
+  text-decoration:none;
+  color:#333;
+  font-weight:500;
+  transition: color 0.3s;
+}
+
+.navbar .menu a:hover{
+  color:#b38f00;
+}
+
+/* --- HERO --- */
+.hero{
+  height: 600px;
+  background-image: url('1000007314.png'); /* ubaci sliku salona/frizure */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#fff;
+  text-align:center;
+}
+
+.hero-overlay{
+  position:absolute;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero .hero-content{
+  position:relative;
+  z-index:2;
+}
+
+.hero h1{
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  margin-bottom: 15px;
+  color:#b38f00; /* zlatna */
+}
+
+.hero p{
+  font-size: 1.5em;
+  color:#fff;
+}
+
+/* --- SECTIONS --- */
+section{
+  padding: 60px 20px;
+  text-align:center;
+}
+
+section h2{
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8em;
+  color: #b38f00; /* zlatna */
+  margin-bottom: 40px;
+}
+
+section h2::after{
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #b38f00;
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+section p{
+  max-width: 800px;
+  margin:0 auto 30px auto;
+  color:#333;
+}
+
+.location {
+  padding: 40px 20px;
+}
+
+.map {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- USLUGE / KARTICE --- */
+.cards{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:30px;
+}
+
+.card{
+  background:#fff;
+  border-radius:15px;
+  padding:30px;
+  max-width:300px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover{
+  transform: translateY(-10px);
+}
+
+.card p{
+  font-size:1em;
+  color:#333;
+}
+
+/* --- FORM ZA ZAKAZIVANJE --- */
+.booking form{
+  max-width:500px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.booking input, .booking select, .booking button{
+  padding:12px 15px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-size:1em;
+  outline:none;
+  transition: all 0.3s;
+}
+
+.booking input:focus, .booking select:focus{
+  border-color:#b38f00;
+  box-shadow:0 0 5px rgba(179,143,0,0.5);
+}
+
+.booking button{
+  background:#b38f00;
+  color:#fff;
+  font-weight:700;
+  cursor:pointer;
+  border:none;
+  transition: background 0.3s;
+}
+
+.booking button:hover{
+  background:#996d00;
+}
+
+/* --- HERO ZA O NAMA / MUESTERIJE --- */
+.small-hero{
+  height:300px;
+  background-image: url('onama.png');
+  background-size:cover;
+  background-position:center;
+  position:relative;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.small-hero .hero-overlay{
+  position:absolute;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.4);
+}
+
+/* --- TIM --- */
+.team-cards{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:30px;
+}
+
+.team-card{
+  background:#fff;
+  border-radius:15px;
+  padding:20px;
+  max-width:250px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.team-card:hover{
+  transform: translateY(-10px);
+}
+
+.team-card img{
+  width:150px;
+  height:150px;
+  object-fit:cover;
+  border-radius:50%;
+  margin-bottom:15px;
+}
+
+.team-card h3{
+  color:#b38f00;
+  margin-bottom:10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.team-card p{
+  color:#333;
+  font-size:1em;
+}
+
+/* --- TESTIMONIALS --- */
+.testimonials{
+  background:#fff8f0;
+}
+
+.hero-about {
+  height:300px;
+  background-image: url('musterije.png');
+  background-size:cover;
+  background-position:center;
+  position:relative;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.hero-about .hero-content {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+.hero-about h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  margin-bottom: 15px;
+  color:#b38f00; /* zlatna */
+}
+
+.hero-about p {
+  font-size: 1.5em;
+  color:#fff;
+}
+
+.testimonials .card{
+  max-width:300px;
+  padding:25px;
+  border-radius:15px;
+}
+
+.testimonials .stars{
+  font-size:1.5em;
+  color:#b38f00;
+  margin-bottom:15px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #fff;
+  color: #333;
+  padding: 60px 40px 25px;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+}
+
+/* GRID */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 60px;
+}
+
+/* LOGO */
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8em;
+  font-weight: 700;
+  color: #b38f00;
+  margin-bottom: 12px;
+}
+
+/* INSTAGRAM */
+.footer-instagram a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-instagram a:hover {
+  color: #b38f00;
+  transform: translateY(-2px);
+}
+
+/* KONTAKT */
+.footer-contact h4,
+.footer-links h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2em;
+  color: #b38f00;
+  margin-bottom: 15px;
+}
+
+.footer-contact p,
+.footer-contact a {
+  font-size: 0.95em;
+  color: #333;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.footer-contact a:hover {
+  color: #b38f00;
+}
+
+/* LINKOVI */
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+position: relative;
+text-decoration: none;
+color: #333;
+font-weight: 500;
+padding-bottom: 6px;
+transition: color 0.3s ease;
+}
+
+/* GOLD LINE HOVER (kao navbar) */
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(to right, #b38f00, #fff1b0);
+  border-radius: 3px;
+  transition: all 0.5s ease;
+  transform: translateX(-50%);
+  opacity: 0.9;
+}
+
+.footer-links a:hover {
+  color: #b38f00;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+/* COPYRIGHT */
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(179,143,0,0.3);
+  text-align: center;
+  font-size: 0.85em;
+  color: #333;
+}
+
+/* =========================
+   FADE-IN ANIMACIJE
+========================= */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   PREMIUM FORM POLJA
+========================= */
+
+.booking form {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.booking input,
+.booking select {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 14px 16px;
+  font-size: 15px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+/* Placeholder stil */
+.booking input::placeholder {
+  color: #999;
+  font-weight: 400;
+}
+
+/* Fokus efekat */
+.booking input:focus,
+.booking select:focus {
+  border-color: #b38f00;
+  box-shadow: 0 0 0 3px rgba(179,143,0,0.15);
+  outline: none;
+}
+
+.consent-field {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 15px;
+  font-size: 0.95em;
+  color: #333;
+}
+
+.consent-field input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #b38f00; /* tvoja zlatna */
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.consent-field label {
+  line-height: 1.4;
+}
+
+.consent-field a {
+  color: #b38f00;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.consent-field a:hover {
+  text-decoration: underline;
+}
+
+/* Select strelica (lux look) */
+.booking select {
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, #b38f00 50%),
+    linear-gradient(135deg, #b38f00 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) calc(50% - 4px),
+    calc(100% - 15px) calc(50% - 4px);
+  background-size: 6px 6px;
+  background-repeat: no-repeat;
+}
+
+/* Dugme */
+.booking button {
+  position: relative;
+  margin-top: 10px;
+  padding: 14px 20px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #b38f00, #d4af37);
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* Hover efekat */
+.booking button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(179,143,0,0.45);
+}
+
+.booking button::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.0) 0%,
+  rgba(255,255,255,0.4) 50%,
+  rgba(255,255,255,0.0 ) 100%);
+  transform: skewX(-25deg);
+  pointer-events: none;
+  z-index: 2;
+}
+
+@keyframes buttonShine {
+  0% { left: -75%; }
+  50% { left: 125%; }
+  100% { left: -75%; }
+}
+
+.booking button::before {
+  animation: buttonShine 5s infinite;
+}
+
+/* === FLOATING LABELS – LUX VERSION === */
+
+.field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.field input {
+  width: 100%;
+  padding: 14px 12px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: transparent;
+  outline: none;
+}
+
+.field label {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 1em;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  background: #fff8f0; /* ista boja kao body */
+  padding: 0 6px;
+}
+
+/* kada klikneš ili ima tekst */
+.field input:focus + label,
+.field input:not(:placeholder-shown) + label {
+  top: -8px;
+  font-size: 0.8em;
+  color: #b38f00;
+}
+
+/* --- FLOATING LABEL ZA field div --- */
+.field {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  padding: 14px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  outline: none;
+  background: #fff8f0;
+  transition: all 0.4s ease;
+}
+
+.field label {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  background: #fff8f0;
+  padding: 0 5px;
+}
+
+.field input:focus + label,
+.field input:not(:placeholder-shown) + label,
+.field select:focus + label,
+.field select:not([value=""]) + label {
+  top: -10px;
+  font-size: 0.85em;
+  color: #b38f00; /* zlatna */
+}
+
+/* PULSATING BORDER */
+.field input:focus,
+.field select:focus {
+  border: 2px solid #b38f00;
+  box-shadow: 0 0 8px rgba(179,143,0,0.4);
+  animation: pulseBorder 1.2s infinite alternate;
+}
+
+@keyframes pulseBorder {
+  0% { box-shadow: 0 0 5px rgba(179,143,0,0.3); }
+  100% { box-shadow: 0 0 15px rgba(179,143,0,0.6); }
+}
+
+/* BOTTOM LINE ANIMATION */
+.field input:focus::after,
+.field select:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #b38f00;
+  transition: width 0.5s ease;
+}
+
+.field input:focus::after,
+.field select:focus::after {
+  width: 100%;
+}
+
+/* VALIDACIJA BOJA */
+.field input.valid,
+.field select.valid { border-color: #00b38f; }
+.field input.invalid,
+.field select.invalid { border-color: #e63946; animation: shake 0.3s; }
+
+@keyframes shake {
+  0% { transform: translateX(0px); }
+  25% { transform: translateX(-2px); }
+  50% { transform: translateX(2px); }
+  75% { transform: translateX(-2px); }
+  100% { transform: translateX(0px); }
+}
+
+/* =========================
+   USKLAĐIVANJE SELECT POLJA
+========================= */
+
+.booking select {
+  background: #fff8f0;
+  color: #333;
+  font-size: 1em;
+  padding: 14px 16px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  border: 1px solid #ccc;
+  transition: all 0.4s ease;
+  cursor: pointer;
+
+  /* uklanjanje default strelice */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* luksuzna zlatna strelica */
+  background-image:
+    linear-gradient(45deg, transparent 50%, #b38f00 50%),
+    linear-gradient(135deg, #b38f00 50%, transparent 50%);
+  background-position:
+    calc(100% - 22px) 50%,
+    calc(100% - 16px) 50%;
+  background-size: 6px 6px;
+  background-repeat: no-repeat;
+}
+
+/* Fokus – isto kao input */
+.booking select:focus {
+  border: 2px solid #b38f00;
+  box-shadow: 0 0 8px rgba(179,143,0,0.45);
+  outline: none;
+  animation: pulseBorder 1.2s infinite alternate;
+}
+
+/* Placeholder boja (kada je value prazna) */
+.booking select:has(option[value=""]:checked) {
+  color: #999;
+}
+
+/* Kada je izabrana opcija */
+.booking select:not(:has(option[value=""]:checked)) {
+  color: #333;
+}
+
+/* ==============================
+   LUXURY CARD EFFECTS
+============================== */
+
+/* Bazni stil kartica */
+.card,
+.team-card,
+.testimonials .card {
+  background: #fff8f0; /* svetla bež/zlatna */
+  border-radius: 15px;
+  padding: 25px 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover: podigni karticu i pojačaj shadow */
+.card:hover,
+.team-card:hover,
+.testimonials .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(179,143,0,0.25); /* zlatni ton shadow */
+}
+
+/* Suptilni svetlosni talas - shimmer */
+.card::before,
+.team-card::before,
+.testimonials .card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%; /* start levo van kartice */
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.3) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  transform: skewX(-20deg);
+  animation: shimmer 4s infinite;
+}
+
+/* Animacija shimmer - povremeno prolazi */
+@keyframes shimmer {
+  0% { left: -75%; }
+  50% { left: 125%; }
+  100% { left: -75%; }
+}
+
+/* Tekst i ostali elementi ostaju normalni */
+.card p,
+.team-card h3,
+.team-card p,
+.testimonials .stars,
+.testimonials .card p {
+  position: relative;
+  z-index: 1; /* iznad shimmera */
+}
+
+.menu {
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.hamburger {
+  display: none;
+}
+
+/* =========================
+   PRIVACY PAGE – HERO ONLY
+   ========================= */
+
+.privacy-page .small-hero {
+  height:300px;
+  background-image: url('privacy.png');
+  background-size:cover;
+  background-position:center;
+  position:relative;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.privacy-page .small-hero .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.privacy-page .small-hero .hero-content {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+.privacy-page .small-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  margin-bottom: 15px;
+  color:#b38f00; /* zlatna */
+}
+
+.privacy-page .small-hero p {
+  font-size: 1.5em;
+  color:#fff;
+}
+
+.privacy-page .privacy a {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.privacy-page .privacy a:hover {
+  text-decoration: underline;
+}
+
+/* =============== HERO =============== */
+.lux-pricing-hero {
+  background-image: url('cenovnik.png');
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px 60px;
+  font-family: 'Cinzel', serif;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.lux-hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  margin-bottom: 15px;
+  color:#b38f00; /* zlatna */
+}
+
+.lux-hero-subtitle {
+  font-size: 1.5em;
+  color:#fff;
+}
+
+/* =============== CENOVNIK =============== */
+.lux-pricing-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  font-family: 'Montserrat', sans-serif;
+  background: #f9f9f9; /* svetla pozadina */
+}
+
+.lux-pricing-title {
+  text-align: center;
+  font-size: 2.8em;
+  font-weight: 700;
+  color: #b38f00;
+  margin-bottom: 60px;
+}
+
+.lux-pricing-category {
+  margin-bottom: 50px;
+  border-left: 3px solid #d4af37;
+  padding-left: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+  transition: all 0.4s ease;
+}
+
+.lux-pricing-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(212,175,55,0.2);
+}
+
+.lux-pricing-category h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #b38f00;
+  border-bottom: 2px solid #d4af37;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.lux-pricing-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lux-pricing-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  margin-bottom: 12px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  transition: all 0.4s ease;
+  cursor: default;
+}
+
+.lux-pricing-list li span {
+  font-weight: 500;
+}
+
+.lux-pricing-list li strong {
+  font-weight: 700;
+}
+
+/* Hover efekt: podiže stavku + zlatna boja */
+.lux-pricing-list li:hover {
+  color: #d4af37;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(212,175,55,0.3);
+}
+
+/* =============== CTA dugme =============== */
+.btn-lux {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  padding: 18px 36px;
+  font-size: 1.3em;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #b38f00, #d4af37);
+  border-radius: 20px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-lux:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(212,175,55,0.45);
+}
+
+.btn-lux::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0) 100%);
+  transform: skewX(-25deg);
+  pointer-events: none;
+  z-index: 2;
+  animation: luxBtnShine 4s infinite;
+}
+
+@keyframes luxBtnShine {
+  0% { left: -75%; }
+  50% { left: 125%; }
+  100% { left: -75%; }
+}
+
+/* LUXURY SELECT STYLING */
+.field select {
+  appearance: none;
+  background: #fff8f0 url('data:image/svg+xml;utf8,<svg fill="%23996d00" height="12" viewBox="0 0 24 24" width="12" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 15px center;
+  background-size: 12px;
+  cursor: pointer;
+  padding-right: 40px;
+}
+
+.navbar .menu a {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar .menu a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%; /* start from center */
+  width: 0%; /* početna širina = 0 */
+  height: 3px;
+  background: linear-gradient(to right, #b38f00, #fff1b0); /* luksuzni zlatni gradient */
+  border-radius: 3px;
+  transition: all 0.5s ease;
+  transform: translateX(-50%);
+  opacity: 0.9;
+}
+
+.navbar .menu a:hover::after {
+  width: 100%; /* raste ka levoj i desnoj strani */
+}
+
+.navbar .menu a:hover {
+  color: #b38f00; /* boja teksta ostaje zlatna na hover */
+}
+
+/* --- RESPONSIVE --- */
+@media(max-width:768px){
+  .menu {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+  }
+  .lux-hero-title { 
+    font-size: 2.2em; 
+  }
+  .lux-hero-subtitle {
+     font-size: 1.2em; 
+  }
+  .lux-pricing-list li { 
+    flex-direction: column; 
+    align-items: flex-start;
+   }
+  .lux-pricing-list li strong {
+     margin-top: 5px;
+   }
+  .btn-lux {
+     width: 100%; 
+     text-align: center; 
+    }
+     .lux-pricing-category {
+    margin-bottom: 2rem;
+  }
+
+  .lux-pricing-list li {
+    display: flex;
+    justify-content: space-between; /* ime i cena na suprotnim stranama */
+    font-size: 0.95em; /* smanjen font */
+    padding: 8px 10px;
+  }
+  footer {
+    padding: 40px 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .footer-logo {
+    text-align: left;
+  }
+  .hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: gold;
+    border-radius: 2px;
+  }
+  .menu.active {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    z-index: 100;
+  }
+  .cards, .team-cards, .testimonials .cards{
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar .menu a{
+    margin-left:15px;
+  }
+  .hero h1{
+    font-size:2.2em;
+  }
+  .hero p{
+    font-size:1.2em;
+  }
+  .privacy-page .small-hero h1 {
+    font-size: 2.2em;
+  }
+  .privacy-page .small-hero p {
+    font-size: 1.2em;
+  }
+  section h2{
+    font-size:2em;
+  }
+}
+
+/* Mobile */
+@media(max-width: 600px) {
+  .booking form {
+    padding: 25px;
+  }
+}
+
+/* Mobile fix za ekrane 320px - 425px */
+@media (max-width: 425px) {
+  html, body {
+    min-height: 100vh; /* osigurava da footer bude na dnu */
+    overflow-x: hidden; /* sprečava horizontalni scroll */
+  }
+
+  .map iframe {
+    width: 100%;
+    height: 220px;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .navbar {
+    flex-wrap: wrap; /* da navbar ne izlazi van ekrana */
+  }
+
+  .hero {
+    padding: 20px; /* smanji padding da ne prelazi ekran */
+  }
+
+  .about img.full-img {
+    max-width: 100%; /* slike da ne prelaze ekran */
+    height: auto;
+  }
+
+  .team-cards {
+    flex-direction: column; /* da kartice stanu u jedan kolonu */
+  }
+
+  footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+}
